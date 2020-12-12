@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Home</title>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="bg-black">
+
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-8 w-auto" src="images/largesse_logo.png" alt="Largesse Logo">
+            <img class="hidden lg:block h-8 w-auto" src="images/largesse_logo.png" alt="Largesse Logo">
+          </div>
+
+          <!-- Dashboard/Charity/Scholarships/Peer funding buttons -->
+          <div class="hidden sm:block sm:ml-6">
+            <div class="flex space-x-4">
+              <a href="#"
+                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Dashboard</a>
+              <a href="charity.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
+              <a href="tuitionReinbursement.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition Reinbursement</a>
+              <a href="peerFunding.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
+                Funding</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Profile dropdown -->
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="ml-3 relative">
+            <div>
+              <button
+                class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                id="user-menu" aria-haspopup="true">
+                <img class="h-8 w-8 rounded-full" src="" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dashboard/Charity/Scholarships/Peer funding buttons -->
+      <div class=" sm:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="homePage.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Dashboard</a>
+          <a href="charity.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
+          <a href="tuitionReinbursement.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition Reinbursement</a>
+          <a href="peerFunding.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
+            Funding</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold leading-tight text-gray-900"> Dashboard </h1>
+    </div>
+  </header>
+
+    <img src="images/fingers.jpeg">
+  <!-- MAIN -->
+  <main>
+
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+
+      <!-- Overview BOX -->
+      <main>
+        <div class="lg:text-center">
+          <!-- <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Overview</h2> -->
+          <h1 class="text-9xl tracking-tight font-extrabold text-yellow-500">Largesse</h1>
+
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">At <b class="text-yellow-500">Largesse</b>, we understand that the communities where
+            we operate are far more than just the physical locations of our facilities. These communities are made up of
+            our families, coworkers and neighbors. They are also the places where our employees choose to live and raise
+            their families, and where our future workforce is educated and trained. <b class="text-yellow-500">Largesse</b> is committed to supporting
+            our
+            employees, their family members and the people of communities.</p>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">This program focuses on making a positive
+            difference
+            through our contributions, deeper connections, and close relationships with organizations that make our
+            society better. The program will encompass all <b class="text-yellow-500">Largesse</b> employees, geographies and will include options for
+            employees to contribute in addition to the <b class="text-yellow-500">Largesse</b> annual contribution. Together, giving with <b class="text-yellow-500">Largesse</b>.</p>
+        </div>
+      </main>
+
+      <!-- Charity BOX -->
+      <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <div class="sm:text-center lg:text-left">
+          <!-- Title -->
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline">Charity</span>
+            <span class="block text-yellow-500 xl:inline">brought to you by Largesse</span>
+          </h1>
+          <!-- Description -->
+          <ul class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+            <li>Partner with a charitable organization globally and provide an annual donation with  <b class="text-yellow-500">Largesse</b>.</li>
+            <br>
+            <li>All charity options are reputable organizations.</li>
+            <br>
+            <li>Donate a minimum of $25 or give with Largesse and make a $100 contribution to the charity of your choice!</li>
+          </ul>
+          <!-- Get Started Button -->
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div>
+              <a href="charity.html"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Scholarship BOX -->
+      <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <div class="sm:text-center lg:text-left">
+          <!-- Title -->
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline">Tuition Reinbursement</span>
+            <span class="block text-yellow-500 xl:inline">brought to you by Largesse</span>
+          </h1>
+          <!-- Description -->
+          <ul class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+            
+            <li>In the process of continuing your education?  Fill out the form on the tuition reinbursement page and see
+              if you qualify!</li>
+            <br>
+            <li>Applicants that complete a college credit with a B average or better will be considered for reinbursement
+              if the course is relevant to their current or future role.
+            </li>
+            
+          </ul>
+          <!-- Get Started Button -->
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div>
+              <a href="tuitionReinbursement.html"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Peer Funding Box -->
+      <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <div class="sm:text-center lg:text-left">
+          <!-- Title -->
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline">Peer Funding</span>
+            <span class="block text-yellow-500 xl:inline">brought to you by Largesse</span>
+          </h1>
+          <!-- Description -->
+          <ul class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+            <li>Internal fund set up to assist employees in time of need.</li>
+            <br>
+            <li>Employees submit individual requests for themselves, for someone else; or even several employees.
+              (tornado, other natural disaster, etc.).</li>
+            <br>
+            <li>  <b class="text-yellow-500">Largesse</b> guarantees a minimum balance for the fund; otherwise it is funded by employee contributions.</li>
+          </ul>
+          <!-- Get Started Button -->
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div>
+              <a href="peerFunding.html"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
