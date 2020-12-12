@@ -14,6 +14,10 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  app.get("/homepage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/homePage.html"));
   });
 
@@ -33,7 +37,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/scholarApp.html"));
   });
 
-  app.get("/sign-up", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/signUp.html"));
+  app.get("/register", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/createAccount.html"));
   });
 };
