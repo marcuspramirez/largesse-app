@@ -1,0 +1,27 @@
+.welcomeHeader {
+    color: #df8e03;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.buttonInfo {
+    text-align: center;
+}
+
+.loginBtn{
+    position: relative;
+    left: 43%;
+    background-color: #df8e03;
+    border: none;
+    margin: .5rem;
+    
+}
+
+.buttonText {
+    color: white;
+    text-decoration:none;
+    font-family:serif;
+}
+
+
