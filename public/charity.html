@@ -2,19 +2,52 @@
 <html lang="en">
 
 <head>
+    <title>Charity</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>Charity</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link href="stylesheets/style.css" rel="stylesheet">
 
 </head>
 
+<style>
+    dialog[open] {
+        animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+    }
+
+    dialog::backdrop {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
+        backdrop-filter: blur(3px);
+    }
+
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateX(-3rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
 <body>
+
+    <!-- USER EMAIL DISPLAY -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Welcome <span class="member-name"></span></h2>
+            </div>
+        </div>
+    </div>
 
     <!-- NAV -->
     <nav class="bg-black">
@@ -30,17 +63,17 @@
                         <img class="hidden lg:block h-8 w-auto" src="images/largesse_logo.png" alt="Largesse Logo">
                     </div>
 
-                    <!-- Dashboard/Charity/Scholarships/NAME buttons -->
+                    <!-- Dashboard/Charity/Scholarships/Peer funding buttons -->
                     <div class="hidden sm:block sm:ml-6">
                         <div class="flex space-x-4">
-                            <a href="homePage.html"
+                            <a href="/homePage"
                                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Home</a>
-                            <a href="charity.html"
+                            <a href="/charity"
                                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
-                            <a href="tuitionReinbursement.html"
+                            <a href="/tuitionReinbursement"
                                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition
-                                Reinbursement</a>
-                            <a href="peerFunding.html"
+                                Reimbursement</a>
+                            <a href="/peerFunding"
                                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
                                 Funding</a>
                         </div>
@@ -52,7 +85,8 @@
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <div class="ml-3 relative">
                         <div>
-                            <a class="navbar-brand" href="/logout">
+                            <a class="navbar-brand px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900"
+                                href="/logout">
                                 Logout
                             </a>
                         </div>
@@ -61,18 +95,18 @@
 
             </div>
 
-            <!-- Mobile Dashboard/Charity/Scholarships/NAME buttons -->
+            <!-- Mobile Dashboard/Charity/Scholarships/Peer funding buttons -->
             <div class=" sm:hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="homePage.html"
+                    <a href="/homePage"
                         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Home</a>
-                    <a href="charity.html"
+                    <a href="/charity"
                         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
-                    <a href="tuitionReinbursement.html"
+                    <a href="/tuitionReinbursement"
                         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition
-                        Reinbursement</a>
-                    <a href="peerFunding.html"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Pure
+                        Reimbursement</a>
+                    <a href="/peerFunding"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
                         Funding</a>
                 </div>
             </div>
@@ -107,7 +141,7 @@
                         Donate to a charity of your choice.
                     </p>
                     <div class="form-group">
-                        <select class="box" multiple class="form-control" id="exampleFormControlSelect2"></select>
+                        <select class="box" multiple class="form-control" id="exampleFormControlSelect2" rows="20"></select>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Donation Amount</label>
@@ -122,22 +156,46 @@
                     <!-- Get Started Button -->
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <div>
-                            <a href="#" id="submitBtn"
-                                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
-                                Donate!
-                            </a>
+                            <section class=" flex h-screen justify-center items-start">
+                                <button onclick="document.getElementById('popUp').showModal()" id="submitBtn" type="submit"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
+                                    Donate!
+                                    </buttion>
+                            </section>
+
+                            <dialog id="popUp" class="h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
+
+                                <div class="flex flex-col w-full h-auto ">
+                                    <div class="flex w-full h-auto justify-center items-center">
+                                        <!-- Header -->
+                                        <div
+                                            class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+                                            Congratualtions!
+                                        </div>
+                                        <div onclick="document.getElementById('popUp').close();"
+                                            class="flex w-1/12 h-auto justify-center cursor-pointer">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-x">
+                                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500">
+                                        Thank you for your donation!
+                                    </div>
+                                </div>
+                            </dialog>
                         </div>
                     </div>
                 </div>
         </div>
-        </div>
     </main>
-
-    </div>
-    </main>
-
 
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/homePage.js"></script>
 </body>
 
 </html>
