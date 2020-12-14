@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <title>Tuition Reimbursement</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="stylesheets/style.css" rel="stylesheet">
@@ -10,15 +12,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <title>Tuition Reinbursement</title>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 
   <style>
-    body {
-      color: #333;
-      background: #fafafa;
-      font-family: "Patua One", sans-serif;
-    }
 
     .contact-form {
       margin: 30px 0;
@@ -70,10 +66,41 @@
       padding-bottom: 20px;
       opacity: 0.6;
     }
+
+    dialog[open] {
+        animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+    }
+
+    dialog::backdrop {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
+        backdrop-filter: blur(3px);
+    }
+
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateX(-3rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- USER EMAIL DISPLAY -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Welcome <span class="member-name"></span></h2>
+      </div>
+    </div>
+  </div>
 
   <!-- NAV -->
   <nav class="bg-black">
@@ -89,17 +116,17 @@
             <img class="hidden lg:block h-8 w-auto" src="images/largesse_logo.png" alt="Largesse Logo">
           </div>
 
-          <!-- Dashboard/Charity/Scholarships/Peer Funding buttons -->
+          <!-- Dashboard/Charity/Scholarships/Peer funding buttons -->
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
-              <a href="homePage.html"
+              <a href="/homePage"
                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Home</a>
-              <a href="charity.html"
+              <a href="/charity"
                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
-              <a href="tuitionReinbursement.html"
+              <a href="/tuitionReinbursement"
                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition
-                Reinbursement</a>
-              <a href="peerFunding.html"
+                Reimbursement</a>
+              <a href="/peerFunding"
                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
                 Funding</a>
             </div>
@@ -111,7 +138,8 @@
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <div class="ml-3 relative">
             <div>
-              <a class="navbar-brand" href="/logout">
+              <a class="navbar-brand px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900"
+                href="/logout">
                 Logout
               </a>
             </div>
@@ -123,14 +151,14 @@
       <!-- Mobile Dashboard/Charity/Scholarships/Peer funding buttons -->
       <div class=" sm:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="homePage.html"
+          <a href="/homePage"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Home</a>
-          <a href="charity.html"
+          <a href="/charity"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
-          <a href="tuitionReinbursement.html"
+          <a href="/tuitionReinbursement"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition
-            Reinbursement</a>
-          <a href="peerFunding.html"
+            Reimbursement</a>
+          <a href="/peerFunding"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
             Funding</a>
         </div>
@@ -142,7 +170,7 @@
   <!-- HEADER -->
   <header class="bg-white shadow">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold leading-tight text-gray-900">Tuition Reinbursement</h1>
+      <h1 class="text-3xl font-bold leading-tight text-gray-900">Tuition Reimbursement</h1>
     </div>
   </header>
 
@@ -154,54 +182,82 @@
       <div class="row">
         <div class="col-md-10 mx-auto">
           <div class="contact-form">
-            <h1>Tuition Reinbursement Request</h1>
+            <h1>Tuition Reimbursement Request</h1>
             <p class="hint-text">Upon completion of course, fill out the information below and tell us how
               the course relates to your current career. We will then reach out and and inform you if you are qualified
-              for reinbursement! (additional information will be requested upon approval)
+              for Reimbursement! (additional information will be requested upon approval)
             </p>
             <form action="/examples/actions/confirmation.php" method="post">
-              
 
-              </div>
-              <div class="form-group">
-                <label for="inputSubject">School</label>
-                <input type="text" class="school form-control" id="inputSubject" required>
-              </div>
-              <div class="form-group">
-                <label for="inputSubject">Course</label>
-                <input type="text" class="course form-control" id="inputSubject" required>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Grade</label>
-                <select class="grade">
-                    <option>A</option>
-                    <option>A-</option>
-                    <option>B</option>
-                    <option>B-</option>
-                </select>
-            </div>
-              <div class="form-group">
-                <label for="inputMessage">Tell us about the course you are taking and how it applies to your future goals!</label>
-                <textarea class="classMessage form-control" id="inputMessage" rows="5" required></textarea>
-              </div>
-              
-              <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div>
-                    <a href="#" id="applyBtn"
-                        class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
-                        Apply!
-                    </a>
-                </div>
-            </div>
-            </form>
+
           </div>
+          <div class="form-group">
+            <label for="inputSubject">School</label>
+            <input type="text" class="school form-control" id="inputSubject" required>
+          </div>
+          <div class="form-group">
+            <label for="inputSubject">Course</label>
+            <input type="text" class="course form-control" id="inputSubject" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Grade</label>
+            <select class="grade">
+              <option>A</option>
+              <option>A-</option>
+              <option>B</option>
+              <option>B-</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputMessage">Tell us about the course you are taking and how it applies to your future
+              goals!</label>
+            <textarea class="classMessage form-control" id="inputMessage" rows="5" required></textarea>
+          </div>
+
+            <!-- Get Started Button -->
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div>
+                <section class=" flex h-screen justify-center items-start">
+                  <button onclick="document.getElementById('popUp').showModal()" id="applyBtn" 
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
+                    Apply!
+                    </buttion>
+                </section>
+
+                <dialog id="popUp" class="h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
+
+                  <div class="flex flex-col w-full h-auto ">
+                    <div class="flex w-full h-auto justify-center items-center">
+                      <!-- Header -->
+                      <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+                        Congratualtions on Applying!
+                      </div>
+                      <div onclick="document.getElementById('popUp').close();"
+                        class="flex w-1/12 h-auto justify-center cursor-pointer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500">
+                      Thank you for your applying!
+                    </div>
+                  </div>
+                </dialog>
+              </div>
+            </div>
+          </div>
+          </form>
         </div>
       </div>
     </div>
-
-
   </main>
+
   <script src="js/reinbursementScript.js"></script>
+  <script type="text/javascript" src="js/homePage.js"></script>
 </body>
 
 </html>
