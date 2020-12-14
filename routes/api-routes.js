@@ -57,7 +57,7 @@ module.exports = function(app) {
       });
   });
   
-  app.post("/api/peer-funding", function(req, res) {
+  app.post("/api/posts/peer", function(req, res) {
     console.log(req.body);
     db.PeerFunding.create(req.body
     )

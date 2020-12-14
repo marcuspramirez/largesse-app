@@ -10,7 +10,7 @@ $(document).ready(function () {
         
         var user = "user@example.com"
         var amount = $('.peerAmount').find(":selected").text()
-        var message = $('.peerMessage').val()
+        var message = $('#peerMessage').val()
             $.post("/api/posts/peer", {user, amount, message}
             )
                 .then(function(){
