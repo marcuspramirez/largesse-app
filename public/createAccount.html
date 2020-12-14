@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Create Account</title>
 </head>
 
@@ -37,7 +38,7 @@
                                 <!-- First Name -->
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first_name" class="block text-sm font-medium text-gray-700">Name</label>
-                                    <input type="text" id="first_name"
+                                    <input type="text" id="name"
                                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 </div>
 
@@ -46,7 +47,7 @@
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="email_address" class="block text-sm font-medium text-gray-700">Email
                                         address</label>
-                                    <input type="text" id="email_address"
+                                    <input type="text" id="email"
                                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 </div>
 
@@ -68,7 +69,7 @@
 
                         <!-- Save Button -->
                         <div class="px-4 py-3 bg-gray-50 sm:px-6">
-                            <button type="submit"
+                            <button id="createBtn" type="submit"
                                 class="bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 Register</button>
                         </div>
@@ -79,7 +80,7 @@
 
         </div>
     </div>
-
+    <script src="js/register.js"></script>
 </body>
 
 </html>

@@ -57,18 +57,27 @@ module.exports = function(app) {
       });
   });
   
-  // app.post("/api/posts", function(req, res) {
-  //   console.log(req.body);
-  //   db.peerFunding.create(req.body
-  //   )
-  //     .then(function(dbPost) {
-  //       res.json(dbPost);
-  //     });
-  // });
+  app.post("/api/peer-funding", function(req, res) {
+    console.log(req.body);
+    db.PeerFunding.create(req.body
+    )
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
 
   app.post("/api/posts/reinburse", function(req, res) {
     console.log(req.body);
     db.Reinbursement.create(req.body
+    )
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+  app.post("/api/posts/register", function(req, res) {
+    console.log(req.body);
+    db.Account.create(req.body
     )
       .then(function(dbPost) {
         res.json(dbPost);

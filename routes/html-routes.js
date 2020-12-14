@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/welcomePage.html"));
   });
 
   app.get("/homepage", function(req, res) {
@@ -39,5 +39,9 @@ module.exports = function(app) {
 
   app.get("/register", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/createAccount.html"));
+  });
+
+  app.get("/welcome", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/welcomePage.html"));
   });
 };
