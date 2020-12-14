@@ -6,6 +6,9 @@
 // =============================================================
 var path = require("path");
 
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -17,28 +20,38 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/welcomePage.html"));
   });
 
-  app.get("/homepage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/homePage.html"));
+  app.get("/createAccount", function(req, res) {
+    // If the user already has an account send them to the homePage page
+    if (req.user) {
+      res.redirect("/homePage");
+    }
+    res.sendFile(path.join(__dirname, "../public/createAccount.html"));
   });
 
   app.get("/login", function(req, res) {
+    // If the user already has an account send them to the homePage page
+    if (req.user) {
+      res.redirect("/homePage");
+    }
     res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  // Here we've add our isAuthenticated middleware to this route.
+  // If a user who is not logged in tries to access this route they will be redirected to the signup page
+  app.get("/homePage", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/homePage.html"));
   });
 
   app.get("/charity", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/charity.html"));
   });
 
-  app.get("/dashboard", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dashboardTemplate.html"));
+  app.get("/tuitionReinbursement", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/tuitionReinbursement.html"));
   });
 
-  app.get("/scholarship", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/scholarApp.html"));
-  });
-
-  app.get("/register", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/createAccount.html"));
+  app.get("/peerFunding", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/peerFunding.html"));
   });
 
   app.get("/welcome", function(req, res) {

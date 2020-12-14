@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="stylesheets/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -32,11 +34,12 @@
                     <div class="hidden sm:block sm:ml-6">
                         <div class="flex space-x-4">
                             <a href="homePage.html"
-                                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Dashboard</a>
+                                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Home</a>
                             <a href="charity.html"
                                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
                             <a href="tuitionReinbursement.html"
-                                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition Reinbursement</a>
+                                class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition
+                                Reinbursement</a>
                             <a href="peerFunding.html"
                                 class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Peer
                                 Funding</a>
@@ -45,15 +48,13 @@
 
                 </div>
 
-                <!-- Profile dropdown -->
+                <!-- Log Out -->
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <div class="ml-3 relative">
                         <div>
-                            <button
-                                class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                                id="user-menu" aria-haspopup="true">
-                                <img class="h-8 w-8 rounded-full" src="" alt="">
-                            </button>
+                            <a class="navbar-brand" href="/logout">
+                                Logout
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -64,11 +65,12 @@
             <div class=" sm:hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <a href="homePage.html"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Dashboard</a>
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Home</a>
                     <a href="charity.html"
                         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Charity</a>
                     <a href="tuitionReinbursement.html"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition Reinbursement</a>
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Tuition
+                        Reinbursement</a>
                     <a href="peerFunding.html"
                         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900">Pure
                         Funding</a>
@@ -104,10 +106,8 @@
                         class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                         Donate to a charity of your choice.
                     </p>
-                    <div id="like_button_container"></div>
                     <div class="form-group">
                         <select class="box" multiple class="form-control" id="exampleFormControlSelect2"></select>
-                        
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Donation Amount</label>
@@ -126,7 +126,6 @@
                                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10">
                                 Donate!
                             </a>
-                            
                         </div>
                     </div>
                 </div>
@@ -134,15 +133,11 @@
         </div>
     </main>
 
-   
-
     </div>
     </main>
 
 
     <script src="js/script.js"></script>
->
-  
 </body>
 
 </html>
