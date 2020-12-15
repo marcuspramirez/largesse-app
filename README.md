@@ -1,26 +1,13 @@
-# IMPACT
+# Largesse
 
 ## Table of Contents
 * [Introduction](#introduction) 
-* [How it Works](#how-it-works)
-* [Requirements](#requirements)
-* [Installation](#installation)
 * [Contributors](#contributors)
 * [Demo Images](#demo-images)
-* [Contact](#contact)
 * [Links](#links)
 
 ## Introduction
 We are building an application that connects employees of the company to charities that company partners with option to also choose their own charity to donate money and time to. The app also offers peer-to-peer assistance (medical assistance, disaster help). This will help the company improve upon employee engagement and employee retention.
-
-## How it Works
-Brief explanation of how it works
-
-## Requirements
-Whats required to run the application
-
-## Installation
-Whats need to be installed to run application
 
 ## Contributors
  Project manager:  
@@ -38,16 +25,26 @@ Front End:
 [Serge Noumbet](https://github.com/sergebryan)  
 
 ## Demo Images
+Welcome Page
+![screenshot](public/images/welcomePage.png) 
 
-![screenshot](assets/images/template1.jpg) 
+Log In
+![screenshot](public/images/logIn.png)  
 
-![screenshot](assets/images/template2.png)  
+Create Account
+![screenshot](public/images/createAccount.png)  
 
-![screenshot](assets/images/template3.png)  
+Home
+![screenshot](public/images/Home.png)
 
-![screenshot](assets/images/template4.jpg)
+Charity
+![screenshot](public/images/Charity.png)
 
-## Contact
+Tuition Reimbursement
+![screenshot](public/images/tuitionR.png)
+
+Peer Funding
+![screenshot](public/images/peerFunding.png)
 
 ## Links
-[Github Repsitory](https://github.com/simplyvpthar/Project-3-IMPACT.git)
+[Github Repsitory](https://github.com/marcuspramirez/largesse-app)
