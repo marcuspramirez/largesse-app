@@ -19,7 +19,7 @@ $(document).ready(function () {
             event.preventDefault();
             // console.log($('.box').find(":selected").text());
             // console.log($('.donation-amount').find(":selected").text());
-            var user = "user@example.com";
+            var user = "Marcus Ramirez";
             var charityName = $('.box').find(":selected").text()
             var amount = $('.donation-amount').find(":selected").text()
                 $.post("/api/posts", {user, charityName, amount}
